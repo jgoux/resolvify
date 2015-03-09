@@ -12,6 +12,7 @@
   },
   "keywords": [
     "browserify",
+    "browserify-transform",
     "require",
     "resolve"
   ],
