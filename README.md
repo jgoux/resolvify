@@ -1,19 +1,21 @@
 # resolvify
 Browserify transform using nodeJS module resolution algorithm
 
-## How to use
+## Install 
 ```
 npm install resolvify --save-dev
 ```
-Add a **resolvify** entry in your package.json with the folders name :
+
+## Use
+Add a **resolvify** entry in your package.json or pass as cli option to transform:
 ```javascript
 //package.json
 ...
-resolvify: ["shared", "common"]
+resolvify: ["shared"]
 ...
 ```
 ```
-browserify -t resolvify
+browserify [ -t resolvify common ]
 ```
 
-Then all the folders in your project called "shared" or "common" will be resolved like "node_modules".
+Then both the folders "shared" and "common" will be resolved like "node_modules".
