@@ -1,6 +1,5 @@
 var transformTools = require('browserify-transform-tools');
 var resolve = require('resolve');
-var path = require('path');
 
 var transform = transformTools.makeRequireTransform(
     "resolvify",
@@ -16,8 +15,7 @@ var transform = transformTools.makeRequireTransform(
                         },[])
         if (paths.length == 0) { return cb(null) }
         resolved = resolve.sync(args[0], {
-            basedir: path.dirname(opts.file),
-//            basedir: __dirname,
+            basedir: __dirname,
             moduleDirectory: ['node_modules'].concat(paths)
         });
 
