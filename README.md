@@ -1,8 +1,6 @@
 # resolvify
 Browserify transform using nodeJS module resolution algorithm
 
-## Installation
-
 ## How to use
 ```
 npm install resolvify --save-dev
