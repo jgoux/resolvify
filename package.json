@@ -1,6 +1,6 @@
 {
   "name": "resolvify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Resolve directories as well as their ancestors like \"node_modules\"",
   "main": "./index.js",
   "scripts": {
