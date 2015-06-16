@@ -15,7 +15,7 @@ resolvify: ["shared"]
 ...
 ```
 ```
-browserify [ -t resolvify common ]
+browserify -t [ resolvify common ]
 ```
 
 Then both the folders "shared" and "common" will be resolved like "node_modules".
