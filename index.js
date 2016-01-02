@@ -11,7 +11,7 @@ var transform = transformTools.makeRequireTransform(
     function(args, opts, cb) {
         var paths = Object.keys(opts.config)
                         .filter(function(opts_key) { return opts_key.length == 1 })
-                        .reduce(function(coll, opts_key) { 
+                        .reduce(function(coll, opts_key) {
                             return coll.concat(opts.config[opts_key])
                         },[])
         if (paths.length == 0) { return cb(null) }
@@ -20,7 +20,7 @@ var transform = transformTools.makeRequireTransform(
             moduleDirectory: ['node_modules'].concat(paths)
         });
 
-        return cb(null, "require('"+resolved+"')");
+        return cb(null, "require('"+resolved.replace(/\\/g,'\\\\')+"')");
     }
 );
 
